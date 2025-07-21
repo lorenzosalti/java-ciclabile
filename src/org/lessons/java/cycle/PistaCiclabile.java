@@ -24,6 +24,7 @@ public class PistaCiclabile {
 
   // BONUS
   public PistaCiclabile() {
+    this.elements = new int[0];
   }
 
   public void addElemento(int elementToAdd) {
