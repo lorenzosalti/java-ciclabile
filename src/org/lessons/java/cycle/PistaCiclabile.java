@@ -3,7 +3,7 @@ package org.lessons.java.cycle;
 public class PistaCiclabile {
 
   // ATTRIBUTES
-  private int currentElement;
+  private int currentElementIndex = 0;
   private int[] elements;
 
   // CONSTRUCTORS
@@ -13,10 +13,12 @@ public class PistaCiclabile {
 
   // METHODS
   public int getElementoSuccessivo() {
-    return elements[currentElement];
+    int element = elements[currentElementIndex];
+    currentElementIndex++;
+    return element;
   }
 
   public boolean hasAncoraElementi() {
-    return currentElement == (elements.length - 1);
+    return currentElementIndex < this.elements.length;
   }
 }
